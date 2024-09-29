@@ -5,9 +5,9 @@
   padding: 50px 20px;
   text-align: center;
   overflow: hidden;
-  margin-right:  30px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  width: 100%;
+  margin: 0; 
+  padding: 50px 0;
   background: rgb(229, 224, 227);
   background: radial-gradient(
     circle,
@@ -15,24 +15,33 @@
     rgb(240, 241, 242) 100%
   );
   width: 100%;
-  padding: 50px 20px; /* Maintain padding if needed */
+  padding: 50px 0; 
   box-sizing: border-box;
-  /* width: 2000px; */
 }
 .hometools-section.dark-mode {
   background: rgba(0, 0, 0, 1);
   background: radial-gradient(#333333, rgba(19, 19, 19, 0.7)),
     rgba(255, 83, 83, 0);
   width: 100%;
-  margin: 0; /* Ensure no margin is causing the gap */
-  padding: 50px 20px; /* Maintain padding if needed */
+  margin: 0; 
+  padding: 50px 20px; 
   box-sizing: border-box;
 }
 .hometools-background {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   overflow: hidden;
+  width: 100%; 
+  margin: 0 auto;
+  
 }
+
+.hometools-content {
+  max-width: 1200px;  
+  margin: 0 auto; 
+  padding: 0 20px; 
+}
+
 .hometools-header {
   margin-top: 20px;
   margin-bottom: 50px;

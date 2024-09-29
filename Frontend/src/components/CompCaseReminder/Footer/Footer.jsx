@@ -48,7 +48,7 @@ const Footer = () => {
             <a href="/">Home</a>
             {/* <a href="/">Shop</a> */}
             <a href="/">Collections</a>
-            <a href="/"> About Us</a>
+            <a href="https://tecosys.in/"> About Us</a>
             <a href="/"> Contact Us</a>
           </div>
           <div>

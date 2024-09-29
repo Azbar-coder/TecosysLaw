@@ -2,7 +2,6 @@ import {React,useState} from "react";
 import "./HomeTools.css";
 import { useNavigate } from "react-router-dom";
 import { FaRobot, FaSearch, FaFileSignature,FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 
 const Hometools = ({ isDarkMode }) => {
@@ -22,7 +21,7 @@ const Hometools = ({ isDarkMode }) => {
 
 
   return (
-    <div className={`hometools-section ${isDarkMode ? "dark-mode" : ""} lg:mt-[100pxF] mt-[200px]`}>
+    <div className={`hometools-section ${isDarkMode ? "dark-mode" : ""} lg:-mt-[100px] -mt-[300px]`}>
       <div className="hometools-background">
         <div className="hometools-content ">
           <div className="hometools-header">

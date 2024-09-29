@@ -19,7 +19,6 @@ const CommonHomePage2 = () => {
       <HomeNavbar onToggleDarkMode={handleToggleDarkMode} />
       <HomeHero isDarkMode={isDarkMode} />
       {/* <HomeAbout isDarkMode={isDarkMode} /> */}
-      <HomeTools isDarkMode={isDarkMode} />
       <HomeTestimonial isDarkMode={isDarkMode} />
       <HomeFooter isDarkMode={isDarkMode} />
     </div>

@@ -82,7 +82,7 @@ const HomeTestimonial = ({ isDarkMode }) => {
       <div className="recent-case-studies ml-[0px] md:mx-auto lg:text-center">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center">Recent Case Studies</h2>
       </div>
-      <div className="ask-for-any-case w-[350px] lg:w-full h-[90px]ml-[-30px]">
+      <div className="ask-for-any-case w-[350px] lg:w-full h-[90px]  -ml-[30px]">
         <input
           type="text"
           placeholder="Ask for any case..."
@@ -93,38 +93,6 @@ const HomeTestimonial = ({ isDarkMode }) => {
           Please login first
         </div>
       </div>
-      {/* <div className="feedback ml-[-100px] md:mx-auto lg:text-center mb-16 ">
-        <h3 className="text-2xl sm:text-3xl lg:text-4xl text-center ">Feedback from our users</h3>
-      </div>
-
-      <div className="testimonial-carousel">
-        <Slider {...settings} >
-
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className={`testimonial-card ${isDarkMode ? "dark-card" : ""}`}>
-              <div className="new-visit">New Visit</div>
-              <div className="quote-icon1">
-                <FaQuoteLeft />
-              </div>
-              <p className="feedback-text">{testimonial.text}</p>
-              <div className="quote-icon2">
-                <FaQuoteRight />
-              </div>
-              <div className="card-footer">
-                <div className="circle-image">
-                  <img src={testimonial.image} alt={testimonial.name} />
-                </div>
-                <div>
-                  <div className="name">{testimonial.name}</div>
-                  <a href={testimonial.link} className="visit-link">
-                    Visit Lawyer
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div> */}
 
       <div className="parent-div text-2xl sm:text-3xl lg:text-4xl ">
         <div className="button-div font-semibold " id="securities">Supported By</div>
