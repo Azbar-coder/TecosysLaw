@@ -1,0 +1,32 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Login to Dockerhub
+      env:
+        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: echo $DOCKER_PASSWORD | docker login ghcr.io -u $DOCKER_USERNAME --password-stdin
+
+    - name: ENV create
+      run: |
+        echo "OPENAI_API_VERSION=${{secrets.OPENAI_API_VERSION}}" >> ./Backend/.env
+        echo "AZURE_OPENAI_ENDPOINT=${{secrets.AZURE_OPENAI_ENDPOINT}}" >> ./Backend/.env
+        echo "AZURE_OPENAI_ENDPOINT1=${{secrets.AZURE_OPENAI_ENDPOINT1}}" >> ./Backend/.env
+        echo "AZURE_OPENAI_API_KEY=${{secrets.AZURE_OPENAI_API_KEY}}" >> ./Backend/.env
+        echo "AZURE_OPENAI_API_KEY1=${{secrets.AZURE_OPENAI_API_KEY1}}" >> ./Backend/.env
+
+    - name: Build the Docker image
+      run: docker build -t ghcr.io/tecosys/rental ./Backend
+
+    - name: Push to Dockerhub
+      run: docker push ghcr.io/tecosys/rental:latest
