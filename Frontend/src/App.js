@@ -8,7 +8,8 @@ import CaseReminder from "./CaseReminder/CaseReminderPage.jsx";
 import RADIntroPage from "./RentalAgreementDrafting/RADIntroPage.jsx";
 import NewDraftDataInput from "./RentalAgreementDrafting/NewDraftDataInput.jsx";
 import CommonHomePage2 from "./CommonHomePage2.js";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LoginPage from "./components/LoginPage/LoginPage.jsx";
@@ -17,31 +18,12 @@ import CaseSummariser from "./CaseSummariser/CaseSummariser.jsx";
 // import LoginPage from "./components/LoginPage/LoginPage.jsx";
 import { ThemeProvider } from "../src/components/CommonHomePage/ThemeContext.js";
 import CaseSearch from "./CaseSearch/CaseSearch.jsx";
-// import HomeTestimonial from "./components/CommonHomePage/HomeTestimonial/HomeTestimonial.jsx";
-// import { Link } from "react-router-dom";
+import ForgetPassword from "./components/Forget-Password/Forget-Password.jsx";
 
 const App = () => {
   return (
+    <>
     <Router>
-      {/* navBar redirected section in UI */}
-      {/* <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/">About Us</Link>
-          </li>
-          <li>
-            <Link to="/">Teams</Link>
-          </li>
-          <li>
-            <Link to="/security">Security & Compliances</Link>
-          </li>
-
-        </ul>
-      </nav> */}
-
       <Routes>
         {/* before pushing the code please update following two lines. */}
         {/* <Route path="/" element={<CommonHomePage />} /> */}
@@ -57,11 +39,13 @@ const App = () => {
         <Route path="/auth-user" element={<LoginPage />} />
         <Route path="/casesummariser" element={<CaseSummariser />} />
         <Route path="/casesearch" element={<CaseSearch />} />
-        {/* <Route path="/security" element={<HomeTestimonial />} /> */}
+        <Route path="/forget-password" element={<ForgetPassword/>}/>
 
         {/* <Route pathe="/case-reminder" element={<CaseReminderPage/>}/> */}
       </Routes>
     </Router>
+    <ToastContainer/>
+    </>
   );
 };
 
