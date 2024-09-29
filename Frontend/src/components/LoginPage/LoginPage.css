@@ -12,13 +12,14 @@
   background-image: none;
   border: 1px solid #747775;
   -webkit-border-radius: 4px;
-  border-radius: 4px;
+  border-radius: 5px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #1f1f1f;
   cursor: pointer;
   font-family: 'Roboto', arial, sans-serif;
   font-size: 14px;
+  font-weight: 600;
   height: 40px;
   letter-spacing: 0.25px;
   outline: none;
@@ -122,18 +123,20 @@
 
 
 .buttonClass {
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid #454545;
   background-color: #ffffff; 
-  color: #000000;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 12px 45px;
+  color: rgb(79 70 229);
+  font-size: 15px;
+  font-weight: 600;
+  height: 45px;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  width: 79%;
   transition: transform 80ms ease-in;
 }
-
+.buttonClass:hover{
+  cursor: pointer;
+}
 .buttonClass:active {
   transform: scale(0.95);
 }
@@ -146,8 +149,8 @@
   background-color: transparent;
   border-color: #ffffff;
   color: #ffffff;
-  border-radius: 20px;
-  border: 1px solid #454545;
+  border-radius: 5px;
+  border: 1px solid rgb(79 70 229);
   font-size: 12px;
   font-weight: bold;
   padding: 12px 45px;
@@ -155,9 +158,12 @@
   text-transform: uppercase;
   transition: transform 80ms ease-in;
 }
+.ghost:hover{
+  cursor: pointer;
+}
 
 .dataSubmitForm {
-  background-color: #000000;
+  background-color: rgb(79 70 229);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,15 +174,29 @@
 }
 
 .inputClass {
-  background-color: #eee;
+  background-color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 8px 10px;
   margin: 8px 0;
   width: 80%;
-  height: 50px;
+  height: 45px;
   border-radius: 10px;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
+  outline: none;
+}
+.inputclass {
+  background-color: white;
+  border: none;
+  padding: 8px 10px;
+  padding-right: 5px;
+  margin: 8px 0;
+  width: 80%;
+  height: 45px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  outline: none;
 }
 
 .container {
@@ -239,6 +259,8 @@
   }
 }
 
+
+@media (min-width: 1024px) {  }
 .overlay-container {
   position: absolute;
   top: 0;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import video1 from '../assets/video1.mp4';
 import "./HomeHero.css";
 
 const HomeHero = ({ isDarkMode }) => {
@@ -68,10 +67,10 @@ const HomeHero = ({ isDarkMode }) => {
 
         {/* Right Side Video */}
         <div className="mt-[30px] mr-14 lg:-mt-24 sm:w-[300px] sm:h-[400px] md:w-[600px] md:h-[400px] lg:w-[600px] lg:h-[400px]">
-          <video className="w-full h-full object-cover rounded-lg" autoPlay loop muted>
+          {/*<video className="w-full h-full object-cover rounded-lg" autoPlay loop muted>
             <source src={video1} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video>*/}
         </div>
       </div>
 
